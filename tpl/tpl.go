@@ -7,8 +7,8 @@ import (
 )
 
 func ConvertMdFile(filename string) {
-	source_path := "content/" + filename
-	dist_path := "dist/" + filename
+	source_path := get_source_path(filename)
+	dist_path := get_dist_path(filename)
 	text, err := ioutil.ReadFile(source_path)
 
 	if err != nil {
